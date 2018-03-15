@@ -1,0 +1,197 @@
+@import "bourbon/bourbon";
+
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	position: absolute;
+}
+
+@mixin widthheight ($wid: auto, $hei: auto) {
+	width: $wid;
+	height: $hei;
+}
+
+@mixin widthheightboth ($both: auto) {
+	width: $both;
+	height: $both;
+}
+
+@mixin widthheightcentered ($wid: auto, $hei: auto) {
+	width: $wid;
+	height: $hei;
+	$halfwid:($wid/2)*-1;
+	$halfheight:($hei/2)*-1;
+	margin: $halfheight 0 0 $halfwid;
+}
+
+@mixin pseudofill() {
+	content: '';
+	position: absolute;
+	top: 0; left: 0;
+	@include widthheightboth(100%);
+}
+
+@mixin willchangetransform() {
+	will-change: transform;
+}
+
+@mixin absolutefill() {
+	position: absolute; top: 0; left: 0;
+	@include widthheightboth(100%);
+}
+
+// EASING
+$fluid: .7,.3,0,1;
+$fluidless: .5,.5,0,1;
+$smootheaseout: .62,.02,.34,1;
+$intenseeaseout: 1,0,0,1;
+$lessintenseperfect: .55,0,0.45,1;
+$suckitin: .38,-0.32,.89,.34;
+$smoothswing: 0.4, 0.3, 0.1, .4;
+$gentleeasein: .5,0,.57,1;
+$lineareaseout: .45,.65,.64,1;
+$sweepinginout: .52,.01,.16,1;
+$lineareasein: .52,.7,.41,1;
+$gentleout: .11,.62,.3,.98;
+$bounce: .03,.75,.23,1.21;
+$intensebounce: .12,.78,.38,1.4;
+
+// COLORS
+// $startup-bg: #181818;
+
+//SCROLLBARS
+// ::-webkit-scrollbar {  
+// 	height: 12px; 
+// 	width: 9px; 
+// 	background: rgba(0,0,0,0); 
+// 	border-radius: 20px;
+// }
+
+// ::-webkit-scrollbar-thumb { 
+// 	background:$threat-red; 
+// 	border: 3px solid #232323;
+// 	border-radius: 20px;
+// }
+
+// ::selection {
+//   background: $threat-red; /* WebKit/Blink Browsers */
+// }
+// ::-moz-selection {
+//   background: $threat-red; /* Gecko Browsers */
+// }
+
+.full-size {
+	@include widthheight(100%, 100%);
+}
+
+.viewport-full-size {
+	@include widthheight(100vw, 100vh);
+}
+
+.full-width {
+	width: 100%;
+}
+
+.pos-a {
+	position: absolute;
+}
+
+.pos-a-center {
+	position: absolute;
+	left: 50%; top: 50%;
+}
+
+.pos-a-t-l {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.pos-a-b-l {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.pos-a-t-r {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.pos-a-b-r {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.pos-f-t-l {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.pos-f {
+	position: fixed;
+}
+
+.pos-f-bottom {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+.pc-b::before {
+	content: "";
+}
+
+.pc-a::after {
+	content: "";
+}
+
+.center-l-t {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+.flex-vert-center {
+	@include display(flex);
+	@include justify-content(center);
+	@include flex-direction(column);
+	height: 100%;
+	margin-top: -0.5%;
+}
+
+.flex-vert {
+	@include display(flex);
+	@include justify-content(center);
+	@include flex-direction(column);
+	> * {
+		height: 100%;
+	}	
+}
+
+.flex-horiz {
+	@include display(flex);
+	@include justify-content(center);
+	@include flex-direction(row);
+	> * {
+		width: 100%;
+	}
+}
+
+.mob-only {
+	display: none;
+	@media only screen and (max-width: 700px) {
+		display: block;
+	}
+}
+.desktop-only {
+	display: block;
+	@media only screen and (max-width: 700px) {
+		display: none;
+	}
+}
