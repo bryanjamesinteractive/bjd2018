@@ -880,7 +880,10 @@ h2 {
   margin-top: 7vw;
   width: 100%;
   text-align: center;
-  white-space: nowrap; }
+  white-space: nowrap;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 12px; }
 
 .octagon-click-hold {
   opacity: 1;
