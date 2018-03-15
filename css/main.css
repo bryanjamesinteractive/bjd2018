@@ -163,8 +163,7 @@ body, html {
     background: red; }
 
 .vs-section {
-  width: 100%;
-  background-color: red; }
+  width: 100%; }
 
 .smooth-content {
   height: 5000px; }
@@ -873,6 +872,15 @@ body {
   -webkit-transition: 0.65s cubic-bezier(0.7, 0.3, 0, 1);
   -moz-transition: 0.65s cubic-bezier(0.7, 0.3, 0, 1);
   transition: 0.65s cubic-bezier(0.7, 0.3, 0, 1); }
+
+h2 {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  margin-top: 7vw;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap; }
 
 .octagon-click-hold {
   opacity: 1;

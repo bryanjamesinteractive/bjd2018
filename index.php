@@ -174,7 +174,10 @@ C1.7,113.4,112,2.5,248.4,1.7h1.5"/>
                         </div>                        
                     </div>
                 </div>
+
             </div>
+
+            <h2>ClickHold&#8482;, let&rsquo; dance.</h2>
             
         </div>
 
@@ -185,7 +188,7 @@ C1.7,113.4,112,2.5,248.4,1.7h1.5"/>
         <div class="normal-cursor-follower js-normal-cursor-follower"></div>
 
         <div class="vs-section">
-            <div class="smooth-content vs-secion">
+            <div class="smooth-content">
                 Hello
             </div>
         </div>

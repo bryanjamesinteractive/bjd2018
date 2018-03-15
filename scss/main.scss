@@ -18,7 +18,7 @@ body, html {
 }
 
 .vs-section {
-	 width: 100%; background-color: red;
+	 width: 100%; 
 }
 .smooth-content {
 	height: 5000px;
@@ -659,7 +659,13 @@ body {
 	@include transition(0.65s cubic-bezier($fluid));
 }
 
-.octagon-svg-shape {
+h2 {
+	position: fixed;
+	left: 0; top: 50%;
+	margin-top: 7vw;
+	width: 100%;
+	text-align: center;
+    white-space: nowrap;
 
 }
 
